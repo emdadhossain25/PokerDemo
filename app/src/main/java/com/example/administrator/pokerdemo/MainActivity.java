@@ -60,10 +60,10 @@ public class MainActivity extends AppCompatActivity {
                                         Toast.makeText(MainActivity.this, "Please enter value in 2-5", Toast.LENGTH_LONG).show();
                                     }
                                 } catch (Exception e){
-                                    e.printStackTrace();
                                     Toast.makeText(MainActivity.this, "Please enter value in 2-5", Toast.LENGTH_LONG).show();
+                                    e.printStackTrace();
                                 }
-                            }
+                                }
                         });
 
                 alertDialog.setNegativeButton("NO",

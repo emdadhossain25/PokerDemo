@@ -49,7 +49,7 @@ public class Deck {
             txtView.append(deck[k].getFace()+deck[k].getSuit()+ "\t"+"\t");
 
         }
-        Toast.makeText(context,"Shuffle done!",Toast.LENGTH_LONG).show();
+        Toast.makeText(context,"Shuffle done! Please scroll down to view full deck.",Toast.LENGTH_LONG).show();
     }
 
     //returns the individual card in the deck
