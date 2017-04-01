@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.e("button_deal","button_deal");
-                game = new Game();
+                game = new Game(MainActivity.this);
                 game.dealCards();
                 game.showCards();
 

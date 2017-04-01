@@ -1,5 +1,9 @@
 package com.example.administrator.pokerdemo;
 
+import android.content.Context;
+import android.text.method.ScrollingMovementMethod;
+import android.widget.TextView;
+
 /**
  * Created by Administrator on 4/1/2017.
  */
@@ -7,8 +11,10 @@ package com.example.administrator.pokerdemo;
 public class Game {
     private Player[] players;
     private Deck deck;
+    Context context;
     //constructor initializes the deck and cards
-    public Game() {
+    public Game(Context context) {
+        this.context=context;
         deck = new Deck();
         players = new Player[4];
         players[0] = new Player();
@@ -28,16 +34,25 @@ public class Game {
     }
     //simulates the game and shows the result
     public void showCards() {
+        TextView txtView = (TextView) ((MainActivity)context).findViewById(R.id.deal_text);
+        txtView.setText(null);
+        txtView.setMovementMethod(new ScrollingMovementMethod());
+        txtView.scrollTo(0,0);
+
         for (int i = 0; i < players.length; i++) {
+            txtView.append("\n ");
             System.out.print("Player " + (i + 1) + ": ");
+            txtView.append("Player " + (i + 1) + ": ");
+            txtView.append("\n ");
+            txtView.append("-------------------------");
             for (int j = 0; j < players[0].getCards().length; j++) {
-                System.out.print("{" + players[i].getCardAtIndex(j).toString()+"} ");
+                txtView.append("\ncard:"+" "+ players[i].getCardAtIndex(j).toString()+" ");
             }
             if(players[i].countPair()> 0)
-                System.out.print("\nPAIR(S):" + players[i].countPair()+ "! ");
+                txtView.append("\nPAIR(S):" + players[i].countPair()+ "! ");
             if(players[i].isFlush())
-                System.out.print("FLUSH!!\n");
-            System.out.println("\n------------------------------------");
+                txtView.append("\nFLUSH!!\n");
+                txtView.append("\n");
         }
     }
 }
