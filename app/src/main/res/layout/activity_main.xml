@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#fff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom|center"
+    tools:context="com.example.administrator.pokerdemo.MainActivity">
+
+    <Button
+        android:id="@+id/button_shuffle"
+        style="android:style/Widget.Material.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shuffle"
+        android:layout_margin="@dimen/_20sdp"
+        android:background="@drawable/shape1"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/button_deal"
+        android:layout_toRightOf="@id/button_shuffle"
+        style="android:style/Widget.Material.Button"
+        android:background="@drawable/shape2"
+        android:layout_margin="@dimen/_20sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="deal"
+        android:textColor="@android:color/white" />
+</RelativeLayout>
