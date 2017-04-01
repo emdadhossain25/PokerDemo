@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button button_deal, button_shuffle;
     Game game;
+    Deck deck;
     int deal_hands;
 
     @Override
@@ -49,14 +50,18 @@ public class MainActivity extends AppCompatActivity {
                 alertDialog.setPositiveButton("YES",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
-                                deal_hands =Integer.parseInt(input.getText().toString());
-                                if (deal_hands>=2 && deal_hands<=5) {
-                                    game = new Game(MainActivity.this,deal_hands);
-                                    game.dealCards();
-                                    game.showCards();
-                                }
-                                else {
-                                    Toast.makeText(MainActivity.this,"Please enter value in 2-5",Toast.LENGTH_LONG).show();
+                                try {
+                                    deal_hands = Integer.parseInt(input.getText().toString());
+                                    if (deal_hands >= 2 && deal_hands <= 5) {
+                                        game = new Game(MainActivity.this, deal_hands);
+                                        game.dealCards();
+                                        game.showCards();
+                                    } else {
+                                        Toast.makeText(MainActivity.this, "Please enter value in 2-5", Toast.LENGTH_LONG).show();
+                                    }
+                                } catch (Exception e){
+                                    e.printStackTrace();
+                                    Toast.makeText(MainActivity.this, "Please enter value in 2-5", Toast.LENGTH_LONG).show();
                                 }
                             }
                         });
@@ -64,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 alertDialog.setNegativeButton("NO",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
+
                                 dialog.cancel();
                             }
                         });
@@ -76,6 +82,8 @@ public class MainActivity extends AppCompatActivity {
         button_shuffle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                deck = new Deck(MainActivity.this);
+                deck.shuffle();
                 Log.e("button_shuffle","button_shuffle");
 
             }

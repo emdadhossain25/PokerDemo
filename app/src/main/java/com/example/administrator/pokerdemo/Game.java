@@ -16,7 +16,7 @@ public class Game {
     //constructor initializes the deck and cards
     public Game(Context context, int deal_hands) {
         this.context=context;
-        deck = new Deck();
+        deck = new Deck(context);
         players = new Player[deal_hands];
         for (int i =0; i<deal_hands;i++){
             players[i]= new Player();

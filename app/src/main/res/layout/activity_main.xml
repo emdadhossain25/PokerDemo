@@ -29,9 +29,8 @@
             android:layout_margin="@dimen/_4sdp"
             android:padding="@dimen/_8sdp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_80sdp"
             android:background="#33ffa3"
-            android:text="shuffle result"
             android:textColor="#fff"
             android:scrollbars="vertical"
             android:maxLines = "100"
@@ -54,9 +53,10 @@
             android:layout_margin="@dimen/_4sdp"
             android:padding="@dimen/_8sdp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_80sdp"
             android:background="#ffa033"
             android:textColor="#fff"
+            android:scrollbars="vertical"
             android:maxLines = "100"
             android:textSize="@dimen/_17sdp"/>
 
