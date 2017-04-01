@@ -40,18 +40,17 @@ public class Game {
         txtView.scrollTo(0,0);
 
         for (int i = 0; i < players.length; i++) {
-            txtView.append("\n ");
-            System.out.print("Player " + (i + 1) + ": ");
             txtView.append("Player " + (i + 1) + ": ");
             txtView.append("\n ");
             txtView.append("-------------------------");
             for (int j = 0; j < players[0].getCards().length; j++) {
-                txtView.append("\ncard:"+" "+ players[i].getCardAtIndex(j).toString()+" ");
+                txtView.append("\ncard :"+" "+ players[i].getCardAtIndex(j).toString()+" ");
             }
             if(players[i].countPair()> 0)
                 txtView.append("\nPAIR(S):" + players[i].countPair()+ "! ");
             if(players[i].isFlush())
                 txtView.append("\nFLUSH!!\n");
+                txtView.append("\n");
                 txtView.append("\n");
         }
     }
