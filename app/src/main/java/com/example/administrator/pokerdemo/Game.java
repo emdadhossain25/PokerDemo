@@ -3,6 +3,7 @@ package com.example.administrator.pokerdemo;
 import android.content.Context;
 import android.text.method.ScrollingMovementMethod;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by Administrator on 4/1/2017.
@@ -13,14 +14,13 @@ public class Game {
     private Deck deck;
     Context context;
     //constructor initializes the deck and cards
-    public Game(Context context) {
+    public Game(Context context, int deal_hands) {
         this.context=context;
         deck = new Deck();
-        players = new Player[4];
-        players[0] = new Player();
-        players[1] = new Player();
-        players[2] = new Player();
-        players[3] = new Player();
+        players = new Player[deal_hands];
+        for (int i =0; i<deal_hands;i++){
+            players[i]= new Player();
+        }
         deck.shuffle();
     }
     //deals the card to each player
@@ -53,5 +53,6 @@ public class Game {
                 txtView.append("\n");
                 txtView.append("\n");
         }
+        Toast.makeText(context,"Deal! Please scroll text view to see full result",Toast.LENGTH_LONG).show();
     }
 }

@@ -30,7 +30,7 @@
             android:padding="@dimen/_8sdp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#ffa033"
+            android:background="#33ffa3"
             android:text="shuffle result"
             android:textColor="#fff"
             android:scrollbars="vertical"
@@ -55,7 +55,7 @@
             android:padding="@dimen/_8sdp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#33ffa3"
+            android:background="#ffa033"
             android:textColor="#fff"
             android:maxLines = "100"
             android:textSize="@dimen/_17sdp"/>
