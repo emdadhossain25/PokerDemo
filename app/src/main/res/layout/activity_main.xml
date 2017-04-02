@@ -2,7 +2,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#fff"
+    android:background="#d9e1e7"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -35,7 +35,7 @@
             android:textColor="#fff"
             android:scrollbars="vertical"
             android:maxLines = "100"
-            android:textSize="@dimen/_17sdp"/>
+            android:textSize="@dimen/_14sdp"/>
 
         <TextView
             android:id="@+id/label_deal"
@@ -60,7 +60,7 @@
             android:textColor="#fff"
             android:scrollbars="vertical"
             android:maxLines = "100"
-            android:textSize="@dimen/_17sdp"/>
+            android:textSize="@dimen/_14sdp"/>
 
     </RelativeLayout>
 
