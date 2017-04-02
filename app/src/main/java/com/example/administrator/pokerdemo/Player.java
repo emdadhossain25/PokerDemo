@@ -63,11 +63,19 @@ public class Player {
 
     // four of a kind method
     public int fourOfaKind() {
-        if (!cards[0].getFace().equalsIgnoreCase(cards[3].getFace()) && !cards[1].getFace().equalsIgnoreCase(cards[4].getFace())) {
-            return 0;
-        } else {
-            return 1;
-        }
+        int counter = 0;
+       for (int i = 0; i<cards.length-1; i++){
+           if (cards[i].getSuit().equalsIgnoreCase(cards[i+1].getSuit())){
+               counter++;
+           }
+       }
+       if (counter==4){
+           return 1;
+       }
+       else {
+           return 0;
+       }
+
     }
 
     // full house

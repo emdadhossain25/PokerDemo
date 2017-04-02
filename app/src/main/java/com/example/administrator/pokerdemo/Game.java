@@ -41,7 +41,7 @@ public class Game {
 
         for (int i = 0; i < players.length; i++) {
             txtView.append("Player " + (i + 1) + ": ");
-            txtView.append("\n ");
+            txtView.append("\n");
             txtView.append("-------------------------");
             for (int j = 0; j < players[0].getCards().length; j++) {
                 txtView.append("\ncard :"+" "+ players[i].getCardAtIndex(j).toString()+"\n ");
@@ -96,7 +96,7 @@ public class Game {
                     txtView.append("\nHighest Card:"+" Ace");
                 }
                 else
-                txtView.append(" Highest Card: "+players[i].highCard());
+                txtView.append("\nHighest Card: "+players[i].highCard());
             }
 
 
