@@ -1,99 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#d9e1e7"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#d9e1e7"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
     tools:context="com.example.administrator.pokerdemo.MainActivity">
 
     <RelativeLayout
         android:id="@+id/rel_text"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_280sdp"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
         android:scrollbars="vertical">
 
         <TextView
             android:id="@+id/label_shuffle"
+            android:layout_width="match_parent"
+            android:elevation="@dimen/_4sdp"
+            android:layout_height="wrap_content"
             android:layout_margin="@dimen/_4sdp"
             android:padding="@dimen/_8sdp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="#33ffa3"
             android:text="Shuffle"
-            android:textColor="#000"
-            android:textSize="@dimen/_20sdp"/>
+            android:textColor="#fff"
+            android:textSize="@dimen/_20sdp" />
+
         <TextView
             android:id="@+id/shuffle_text"
-            android:layout_below="@id/label_shuffle"
-            android:elevation="@dimen/_2sdp"
-            android:layout_margin="@dimen/_4sdp"
-            android:padding="@dimen/_8sdp"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_80sdp"
+            android:layout_height="@dimen/_280sdp"
+            android:layout_below="@id/label_shuffle"
+            android:layout_margin="@dimen/_4sdp"
             android:background="#33ffa3"
-            android:textColor="#fff"
+            android:elevation="@dimen/_4sdp"
+            android:maxLines="100"
+            android:padding="@dimen/_8sdp"
             android:scrollbars="vertical"
-            android:maxLines = "100"
-            android:textSize="@dimen/_14sdp"/>
+            android:textColor="#fff"
+            android:textSize="@dimen/_14sdp" />
+        <Button
+            android:id="@+id/button_shuffle"
+            style="android:style/Widget.Material.Button"
+            android:layout_below="@id/shuffle_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_20sdp"
+            android:background="@drawable/shape1"
+            android:elevation="@dimen/_4sdp"
+            android:text="Shuffle"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_18sdp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_text2"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
 
         <TextView
             android:id="@+id/label_deal"
-            android:layout_below="@id/shuffle_text"
-            android:layout_margin="@dimen/_4sdp"
-            android:padding="@dimen/_8sdp"
-            android:scrollbars="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Deal"
-            android:textColor="#000"
-            android:textSize="@dimen/_20sdp"/>
-        <TextView
-            android:id="@+id/deal_text"
-            android:layout_below="@id/label_deal"
-            android:elevation="@dimen/_2sdp"
             android:layout_margin="@dimen/_4sdp"
             android:padding="@dimen/_8sdp"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_80sdp"
+            android:gravity="center"
+            android:elevation="@dimen/_4sdp"
             android:background="#ffa033"
+            android:text="Deal"
             android:textColor="#fff"
+            android:textSize="@dimen/_20sdp" />
+
+        <TextView
+            android:id="@+id/deal_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_280sdp"
+            android:layout_below="@id/label_deal"
+            android:layout_margin="@dimen/_4sdp"
+            android:background="#ffa033"
+            android:elevation="@dimen/_4sdp"
+            android:maxLines="100"
+            android:padding="@dimen/_8sdp"
             android:scrollbars="vertical"
-            android:maxLines = "100"
-            android:textSize="@dimen/_14sdp"/>
+            android:textColor="#fff"
+            android:textSize="@dimen/_14sdp" />
 
-    </RelativeLayout>
+        <Button
+            android:id="@+id/button_deal"
+            style="android:style/Widget.Material.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_20sdp"
+            android:layout_below="@id/deal_text"
+            android:background="@drawable/shape2"
+            android:elevation="@dimen/_4sdp"
+            android:text="deal"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_18sdp" />
 
+        </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/rel_button"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="bottom|center">
-    <Button
-        android:id="@+id/button_shuffle"
-        style="android:style/Widget.Material.Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Shuffle"
-        android:elevation="@dimen/_2sdp"
-        android:textSize="@dimen/_18sdp"
-        android:layout_margin="@dimen/_20sdp"
-        android:background="@drawable/shape1"
-        android:textColor="@android:color/white" />
-
-    <Button
-        android:id="@+id/button_deal"
-        android:layout_toRightOf="@id/button_shuffle"
-        android:elevation="@dimen/_2sdp"
-        style="android:style/Widget.Material.Button"
-        android:background="@drawable/shape2"
-        android:textSize="@dimen/_18sdp"
-        android:layout_margin="@dimen/_20sdp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="deal"
-        android:textColor="@android:color/white" />
-
-    </RelativeLayout>
 </LinearLayout>
+
+

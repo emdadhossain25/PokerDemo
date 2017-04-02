@@ -46,7 +46,7 @@ public class Deck {
         }
 
         for (int k = 0;k<deck.length;k++){
-            txtView.append(deck[k].getFace()+deck[k].getSuit()+ "\t"+"\t");
+            txtView.append(deck[k].getFace()+deck[k].getSuit()+ "\n");
 
         }
         if(s==1){
