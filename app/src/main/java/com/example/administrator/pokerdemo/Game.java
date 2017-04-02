@@ -44,14 +44,64 @@ public class Game {
             txtView.append("\n ");
             txtView.append("-------------------------");
             for (int j = 0; j < players[0].getCards().length; j++) {
-                txtView.append("\ncard :"+" "+ players[i].getCardAtIndex(j).toString()+" ");
+                txtView.append("\ncard :"+" "+ players[i].getCardAtIndex(j).toString()+"\n ");
             }
-            if(players[i].countPair()> 0)
-                txtView.append("\nPAIR(S):" + players[i].countPair()+ "! ");
-            if(players[i].isFlush())
-                txtView.append("\nFLUSH!!\n");
-                txtView.append("\n");
-                txtView.append("\n");
+            if(players[i].royalFlush()==1){
+                txtView.append("\nResult: Royal Flush");
+            }
+            else if(players[i].straightFlush()==1)
+            {
+                txtView.append("\nResult: FLUSH!!\n");
+            }
+
+            else if(players[i].fourOfaKind()==1)
+            {
+                txtView.append("\nResult: Four of a kind!!\n");
+            }
+
+            else if(players[i].fullHouse()==1)
+            {
+                txtView.append("\nResult: Full House!!\n");
+            }
+
+            else if(players[i].flush()==1)
+            {
+                txtView.append("\nResult: Flush!!\n");
+            }
+
+            else if(players[i].straight()==1)
+            {
+                txtView.append("\nResult: Straight!!\n");
+            }
+
+            else if(players[i].twoPairs()==1)
+            {
+                txtView.append("\nResult: Two pairs!!\n");
+            }
+
+            else if(players[i].triple()==1)
+            {
+                txtView.append("\nResult: Triple!!\n");
+            }
+
+            else if(players[i].pair()==1)
+            {
+                txtView.append("\nResult: Pair!!\n");
+            }
+
+
+            else if(players[i].highCard()!=0)
+            {
+                if (players[i].highCard()==14){
+                    txtView.append("\nHighest Card:"+" Ace");
+                }
+                else
+                txtView.append(" Highest Card: "+players[i].highCard());
+            }
+
+
+            txtView.append("\n");
+            txtView.append("\n");
         }
         Toast.makeText(context,"Deal! Please scroll text view to see full result",Toast.LENGTH_LONG).show();
     }
