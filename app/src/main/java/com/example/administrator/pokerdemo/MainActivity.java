@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 deck = new Deck(MainActivity.this);
-                deck.shuffle();
+                deck.shuffle(1);
                 Log.e("button_shuffle","button_shuffle");
 
             }

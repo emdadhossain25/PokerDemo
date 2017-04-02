@@ -21,7 +21,7 @@ public class Game {
         for (int i =0; i<deal_hands;i++){
             players[i]= new Player();
         }
-        deck.shuffle();
+        deck.shuffle(0);
     }
     //deals the card to each player
     public void dealCards() {

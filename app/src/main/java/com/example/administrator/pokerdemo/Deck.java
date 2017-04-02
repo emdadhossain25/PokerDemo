@@ -30,7 +30,7 @@ public class Deck {
     }
 
     //shuffles the deck
-    public void shuffle(){
+    public void shuffle(int s){
         // setting the text view for shuffle text
         TextView txtView = (TextView) ((MainActivity)context).findViewById(R.id.shuffle_text);
         txtView.setText(null);
@@ -49,7 +49,9 @@ public class Deck {
             txtView.append(deck[k].getFace()+deck[k].getSuit()+ "\t"+"\t");
 
         }
+        if(s==1){
         Toast.makeText(context,"Shuffle done! Please scroll down to view full deck.",Toast.LENGTH_LONG).show();
+        }
     }
 
     //returns the individual card in the deck
