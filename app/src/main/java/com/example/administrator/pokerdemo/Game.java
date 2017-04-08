@@ -95,6 +95,15 @@ public class Game {
                 if (players[i].highCard()==14){
                     txtView.append("\nHighest Card:"+" Ace");
                 }
+                else if (players[i].highCard()==13){
+                    txtView.append("\nHighest Card:"+" King");
+                }
+                else if (players[i].highCard()==12){
+                    txtView.append("\nHighest Card:"+" Queen");
+                }
+                else if (players[i].highCard()==11){
+                    txtView.append("\nHighest Card:"+" Jack");
+                }
                 else
                 txtView.append("\nHighest Card: "+players[i].highCard());
             }
