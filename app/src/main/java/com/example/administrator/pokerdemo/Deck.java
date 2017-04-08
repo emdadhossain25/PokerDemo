@@ -14,7 +14,7 @@ import java.util.Random;
 
 public class Deck {
     Context context;
-    private final String faces[] = {"Ace","2","3","4","5","6","7","8","9","10","Jack","Queen","King"};
+    private final String faces[] = {"2","3","4","5","6","7","8","9","10","11","12","13","14"};
     private final String suits[]={"Hearts","Diamonds","Clubs","Spades"};
     private Card deck[];
     private final int TOTAL_CARDS=52;

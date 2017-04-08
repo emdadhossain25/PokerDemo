@@ -12,20 +12,19 @@ public class Card {
     public Card(String face, String suit) {
         super();
         if (face.equalsIgnoreCase("14")) {
-            this.face = "Ace";
+            face = "Ace";
         }
         if (face.equalsIgnoreCase("13")) {
-            this.face = "King";
+            face = "King";
         }
         if (face.equalsIgnoreCase("12")) {
-            this.face = "Queen";
+            face = "Queen";
         }
         if (face.equalsIgnoreCase("11")) {
-            this.face = "Jack";
+            face = "Jack";
         }
-        else {
-            this.face = face;
-        }
+
+        this.face = face;
         this.suit = suit;
     }
 

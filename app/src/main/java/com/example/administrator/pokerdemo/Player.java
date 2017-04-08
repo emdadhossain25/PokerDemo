@@ -30,7 +30,25 @@ public class Player {
     public void setCardAtIndex(Card c, int index) {
         if (index >= 0 && index < MAX_CARD)
             cards[index] = c;
+
     }
+
+    public static int[] doSelectionSort(int[] arr){
+
+        for (int i = 0; i < arr.length - 1; i++)
+        {
+            int index = i;
+            for (int j = i + 1; j < arr.length; j++)
+                if (arr[j] < arr[index])
+                    index = j;
+
+            int smallerNumber = arr[index];
+            arr[index] = arr[i];
+            arr[i] = smallerNumber;
+        }
+        return arr;
+    }
+
 
     // check for royal flush
     public int royalFlush() {
@@ -175,4 +193,7 @@ public class Player {
         }
         return highCard;
     }
+
+
+
 }
