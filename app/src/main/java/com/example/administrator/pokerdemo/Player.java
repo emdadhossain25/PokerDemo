@@ -177,6 +177,54 @@ public class Player {
      * @return
      */
     public int straight() {
+
+        int highCard =0;
+
+        for (int counter =0; counter<cards.length;counter++) {
+
+            if (cards[counter].getFace().equalsIgnoreCase("Ace")) {
+                cards[counter].setFace("14");
+            } else if (cards[counter].getFace().equalsIgnoreCase("King")) {
+                cards[counter].setFace("13");
+            } else if (cards[counter].getFace().equalsIgnoreCase("Queen")) {
+                cards[counter].setFace("12");
+            } else if (cards[counter].getFace().equalsIgnoreCase("Jack")) {
+                cards[counter].setFace("11");
+            }
+        }
+        if (flush()==0){
+        if (cards[0].getFace().equalsIgnoreCase(cards[1].getFace())){
+            return 0;
+        }
+        else if (cards[0].getFace().equalsIgnoreCase(cards[2].getFace())){
+            return 0;
+        }
+        else if (cards[0].getFace().equalsIgnoreCase(cards[3].getFace())){
+            return 0;
+        }
+        else if (cards[0].getFace().equalsIgnoreCase(cards[4].getFace())){
+            return 0;
+        }
+        else if (cards[1].getFace().equalsIgnoreCase(cards[2].getFace())){
+            return 0;
+        }
+        else if (cards[1].getFace().equalsIgnoreCase(cards[3].getFace())){
+            return 0;
+        }
+        else if (cards[1].getFace().equalsIgnoreCase(cards[4].getFace())){
+            return 0;
+        }
+        else if (cards[2].getFace().equalsIgnoreCase(cards[3].getFace())){
+            return 0;
+        }
+        else if (cards[2].getFace().equalsIgnoreCase(cards[4].getFace())){
+            return 0;
+        }
+        else if (cards[3].getFace().equalsIgnoreCase(cards[4].getFace())){
+            return 0;
+        }
+        }
+
         return 0;
     }
 
