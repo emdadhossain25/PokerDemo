@@ -50,18 +50,52 @@ public class Player {
     }
 
 
-    // check for royal flush
+    /**
+     * checking for royal flush - same suit 5 cards with ACE, KING, QUEEN, JACK, 10;
+     * @return
+     */
     public int royalFlush() {
-        if (cards[0].getFace().equalsIgnoreCase("Ace") &&
-                cards[1].getFace().equalsIgnoreCase("10") &&
-                cards[2].getFace().equalsIgnoreCase("Jack") &&
-                cards[3].getFace().equalsIgnoreCase("Queen") &&
-                cards[4].getFace().equalsIgnoreCase("King")) {
-            return 1;
-        } else {
-            return 0;
+        // checking if the cards are in the same suit or flush
+        int i = flush();
+        int counter=0;
+
+        // checking for flush
+        if (i==1)
+        {
+            // iterating through cards for checking royal
+            for (int j = 0; j < cards.length; j++) {
+                if (
+                                cards[j].getFace().equalsIgnoreCase("Ace") ||
+                                cards[j].getFace().equalsIgnoreCase("King") ||
+                                cards[j].getFace().equalsIgnoreCase("Queen") ||
+                                cards[j].getFace().equalsIgnoreCase("Jack") ||
+                                cards[j].getFace().equalsIgnoreCase("10"))
+                {
+                    counter = counter + 1;
+                    if (counter ==cards.length){
+                        return 1;
+                    }
+                }
+            }
         }
+        return 0;
     }
+
+
+    /**
+     * checking for flush - same suit 5 cards
+     * @return
+     */
+    public int flush() {
+        for (int counter = 1; counter < cards.length; counter++) {
+            if (!cards[0].getSuit().equalsIgnoreCase(cards[counter].getSuit())) {
+                return 0;
+            }
+        }
+        return 1;
+    }
+
+
 
     // straight flush method
     public int straightFlush() {
@@ -111,15 +145,7 @@ public class Player {
         }
     }
 
-    // checks for flush
-    public int flush() {
-        for (int counter = 1; counter < 5; counter++) {
-            if (!cards[0].getSuit().equalsIgnoreCase(cards[counter].getSuit())) {
-                return 0;
-            }
-        }
-        return 1;
-    }
+
 
     // check for straight
     public int straight() {
