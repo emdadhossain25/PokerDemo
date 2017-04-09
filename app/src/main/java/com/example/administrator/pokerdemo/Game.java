@@ -54,15 +54,15 @@ public class Game {
                 txtView.append("\nResult: FLUSH!!\n");
             }
 
-            else if(players[i].fourOfaKind()==1)
-            {
-                txtView.append("\nResult: Four of a kind!!\n");
-            }
+//            else if(players[i].fourOfaKind()==1)
+//            {
+//                txtView.append("\nResult: Four of a kind!!\n");
+//            }
 
-            else if(players[i].fullHouse()==1)
-            {
-                txtView.append("\nResult: Full House!!\n");
-            }
+//            else if(players[i].fullHouse()==1)
+//            {
+//                txtView.append("\nResult: Full House!!\n");
+//            }
 
             else if(players[i].flush()==1)
             {
@@ -74,20 +74,20 @@ public class Game {
                 txtView.append("\nResult: Straight!!\n");
             }
 
-            else if(players[i].twoPairs()==1)
-            {
-                txtView.append("\nResult: Two pairs!!\n");
-            }
-
-            else if(players[i].triple()==1)
-            {
-                txtView.append("\nResult: Triple!!\n");
-            }
-
-            else if(players[i].pair()==1)
-            {
-                txtView.append("\nResult: Pair!!\n");
-            }
+//            else if(players[i].twoPairs()==1)
+//            {
+//                txtView.append("\nResult: Two pairs!!\n");
+//            }
+//
+//            else if(players[i].triple()==1)
+//            {
+//                txtView.append("\nResult: Triple!!\n");
+//            }
+//
+//            else if(players[i].pair()==1)
+//            {
+//                txtView.append("\nResult: Pair!!\n");
+//            }
 
 
             else if(players[i].highCard()!=0)
