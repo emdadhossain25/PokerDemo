@@ -59,12 +59,12 @@ public class Game {
 //                txtView.append("\nResult: Four of a kind!!\n");
 //            }
 
-//            else if(players[i].fullHouse()==1)
-//            {
-//                txtView.append("\nResult: Full House!!\n");
-//            }
+             if(players[i].fullHouse()==1)
+            {
+                txtView.append("\nResult: Full House!!\n");
+            }
 
-             if(players[i].flush()==1)
+            else if(players[i].flush()==1)
             {
                 txtView.append("\nResult: Flush!!\n");
             }

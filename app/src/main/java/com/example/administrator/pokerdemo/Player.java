@@ -34,14 +34,96 @@ public class Player {
     }
 
     /**
-     * checking flush
+     * full house - 3 same value and 2 same value
+     *
      * @return
      */
-    public int flush(){
-        if (cards[0].getSuit().equalsIgnoreCase(cards[1].getSuit())){
-            if (cards[0].getSuit().equalsIgnoreCase(cards[2].getSuit())){
-                if (cards[0].getSuit().equalsIgnoreCase(cards[3].getSuit())){
-                    if (cards[0].getSuit().equalsIgnoreCase(cards[4].getSuit())){
+    public int fullHouse() {
+        if (cards[0].getFace().equalsIgnoreCase(cards[1].getFace()))
+        {
+            if (cards[0].getFace().equalsIgnoreCase(cards[2].getFace())) {
+                if (!cards[0].getFace().equalsIgnoreCase(cards[3].getFace())) {
+                    if (cards[3].getFace().equalsIgnoreCase(cards[4].getFace())) {
+                        return 1;
+                    }
+                }
+            }
+
+        }
+        else  if (cards[0].getFace().equalsIgnoreCase(cards[2].getFace()))
+        {
+            if (cards[0].getFace().equalsIgnoreCase(cards[3].getFace())) {
+                if (!cards[0].getFace().equalsIgnoreCase(cards[4].getFace())) {
+                    if (cards[1].getFace().equalsIgnoreCase(cards[4].getFace())) {
+                        return 1;
+                    }
+                }
+            }
+            else  if (cards[0].getFace().equalsIgnoreCase(cards[2].getFace())) {
+                if (cards[0].getFace().equalsIgnoreCase(cards[4].getFace())) {
+                    if (!cards[0].getFace().equalsIgnoreCase(cards[3].getFace())) {
+                        if (cards[1].getFace().equalsIgnoreCase(cards[3].getFace())) {
+                            return 1;
+                        }
+                    }
+                }
+            }
+
+            else  if (cards[0].getFace().equalsIgnoreCase(cards[3].getFace())) {
+                if (cards[0].getFace().equalsIgnoreCase(cards[4].getFace())) {
+                    if (!cards[0].getFace().equalsIgnoreCase(cards[2].getFace())) {
+                        if (cards[1].getFace().equalsIgnoreCase(cards[2].getFace())) {
+                            return 1;
+                        }
+                    }
+                }
+            }
+
+            else  if (cards[1].getFace().equalsIgnoreCase(cards[2].getFace())) {
+                if (cards[1].getFace().equalsIgnoreCase(cards[3].getFace())) {
+                    if (!cards[1].getFace().equalsIgnoreCase(cards[4].getFace())) {
+                        if (cards[0].getFace().equalsIgnoreCase(cards[4].getFace())) {
+                            return 1;
+                        }
+                    }
+                }
+            }
+
+            else  if (cards[1].getFace().equalsIgnoreCase(cards[2].getFace())) {
+                if (cards[1].getFace().equalsIgnoreCase(cards[4].getFace())) {
+                    if (!cards[1].getFace().equalsIgnoreCase(cards[0].getFace())) {
+                        if (cards[0].getFace().equalsIgnoreCase(cards[3].getFace())) {
+                            return 1;
+                        }
+                    }
+                }
+            }
+
+            else  if (cards[3].getFace().equalsIgnoreCase(cards[2].getFace())) {
+                if (cards[3].getFace().equalsIgnoreCase(cards[4].getFace())) {
+                    if (!cards[3].getFace().equalsIgnoreCase(cards[0].getFace())) {
+                        if (cards[0].getFace().equalsIgnoreCase(cards[1].getFace())) {
+                            return 1;
+                        }
+                    }
+                }
+            }
+
+
+        }
+        return 0;
+    }
+
+    /**
+     * checking flush- all 5 same suit
+     *
+     * @return
+     */
+    public int flush() {
+        if (cards[0].getSuit().equalsIgnoreCase(cards[1].getSuit())) {
+            if (cards[0].getSuit().equalsIgnoreCase(cards[2].getSuit())) {
+                if (cards[0].getSuit().equalsIgnoreCase(cards[3].getSuit())) {
+                    if (cards[0].getSuit().equalsIgnoreCase(cards[4].getSuit())) {
                         return 1;
                     }
                 }
@@ -52,9 +134,10 @@ public class Player {
 
     /**
      * straight
+     *
      * @return
      */
-    public int straight(){
+    public int straight() {
         return 0;
     }
 
@@ -103,7 +186,7 @@ public class Player {
     }
 
     /**
-     * chekcing for triple
+     * chekcing for triple- 3 same value
      */
 
     public int threeofakind() {
@@ -146,7 +229,7 @@ public class Player {
     }
 
     /**
-     * checking for single pair
+     * checking for single pair- one pair
      *
      * @return
      */
