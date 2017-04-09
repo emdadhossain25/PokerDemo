@@ -54,10 +54,10 @@ public class Game {
 //                txtView.append("\nResult: FLUSH!!\n");
 //            }
 
-//            else if(players[i].fourOfaKind()==1)
-//            {
-//                txtView.append("\nResult: Four of a kind!!\n");
-//            }
+             if(players[i].fourOfaKind()==1)
+            {
+                txtView.append("\nResult: Four of a kind!!\n");
+            }
 
              if(players[i].fullHouse()==1)
             {

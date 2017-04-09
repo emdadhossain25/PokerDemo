@@ -34,13 +34,63 @@ public class Player {
     }
 
     /**
+     * four of a kind- 4 same value
+     */
+
+    public int fourOfaKind() {
+        if (cards[0].getFace().equalsIgnoreCase(cards[1].getFace())) {
+            if (cards[0].getFace().equalsIgnoreCase(cards[2].getFace())) {
+                if (cards[0].getFace().equalsIgnoreCase(cards[3].getFace())) {
+                    if (!cards[0].getFace().equalsIgnoreCase(cards[4].getFace())) {
+                        return 1;
+                    }
+                }
+            }
+        } else if (cards[0].getFace().equalsIgnoreCase(cards[1].getFace())) {
+            if (cards[0].getFace().equalsIgnoreCase(cards[2].getFace())) {
+                if (cards[0].getFace().equalsIgnoreCase(cards[4].getFace())) {
+                    if (!cards[0].getFace().equalsIgnoreCase(cards[3].getFace())) {
+                        return 1;
+                    }
+                }
+            }
+        } else if (cards[0].getFace().equalsIgnoreCase(cards[1].getFace())) {
+            if (cards[0].getFace().equalsIgnoreCase(cards[3].getFace())) {
+                if (cards[0].getFace().equalsIgnoreCase(cards[4].getFace())) {
+                    if (!cards[0].getFace().equalsIgnoreCase(cards[2].getFace())) {
+                        return 1;
+                    }
+                }
+            } else if (cards[0].getFace().equalsIgnoreCase(cards[2].getFace())) {
+                if (cards[0].getFace().equalsIgnoreCase(cards[3].getFace())) {
+                    if (cards[0].getFace().equalsIgnoreCase(cards[4].getFace())) {
+                        if (!cards[0].getFace().equalsIgnoreCase(cards[1].getFace())) {
+                            return 1;
+                        }
+                    }
+                }
+            }
+        } else if (cards[1].getFace().equalsIgnoreCase(cards[2].getFace())) {
+            if (cards[1].getFace().equalsIgnoreCase(cards[3].getFace())) {
+                if (cards[1].getFace().equalsIgnoreCase(cards[4].getFace())) {
+                    if (!cards[0].getFace().equalsIgnoreCase(cards[1].getFace())) {
+                        return 1;
+                    }
+                }
+            }
+        }
+
+        return 0;
+    }
+
+
+    /**
      * full house - 3 same value and 2 same value
      *
      * @return
      */
     public int fullHouse() {
-        if (cards[0].getFace().equalsIgnoreCase(cards[1].getFace()))
-        {
+        if (cards[0].getFace().equalsIgnoreCase(cards[1].getFace())) {
             if (cards[0].getFace().equalsIgnoreCase(cards[2].getFace())) {
                 if (!cards[0].getFace().equalsIgnoreCase(cards[3].getFace())) {
                     if (cards[3].getFace().equalsIgnoreCase(cards[4].getFace())) {
@@ -49,17 +99,14 @@ public class Player {
                 }
             }
 
-        }
-        else  if (cards[0].getFace().equalsIgnoreCase(cards[2].getFace()))
-        {
+        } else if (cards[0].getFace().equalsIgnoreCase(cards[2].getFace())) {
             if (cards[0].getFace().equalsIgnoreCase(cards[3].getFace())) {
                 if (!cards[0].getFace().equalsIgnoreCase(cards[4].getFace())) {
                     if (cards[1].getFace().equalsIgnoreCase(cards[4].getFace())) {
                         return 1;
                     }
                 }
-            }
-            else  if (cards[0].getFace().equalsIgnoreCase(cards[2].getFace())) {
+            } else if (cards[0].getFace().equalsIgnoreCase(cards[2].getFace())) {
                 if (cards[0].getFace().equalsIgnoreCase(cards[4].getFace())) {
                     if (!cards[0].getFace().equalsIgnoreCase(cards[3].getFace())) {
                         if (cards[1].getFace().equalsIgnoreCase(cards[3].getFace())) {
@@ -67,9 +114,7 @@ public class Player {
                         }
                     }
                 }
-            }
-
-            else  if (cards[0].getFace().equalsIgnoreCase(cards[3].getFace())) {
+            } else if (cards[0].getFace().equalsIgnoreCase(cards[3].getFace())) {
                 if (cards[0].getFace().equalsIgnoreCase(cards[4].getFace())) {
                     if (!cards[0].getFace().equalsIgnoreCase(cards[2].getFace())) {
                         if (cards[1].getFace().equalsIgnoreCase(cards[2].getFace())) {
@@ -77,9 +122,7 @@ public class Player {
                         }
                     }
                 }
-            }
-
-            else  if (cards[1].getFace().equalsIgnoreCase(cards[2].getFace())) {
+            } else if (cards[1].getFace().equalsIgnoreCase(cards[2].getFace())) {
                 if (cards[1].getFace().equalsIgnoreCase(cards[3].getFace())) {
                     if (!cards[1].getFace().equalsIgnoreCase(cards[4].getFace())) {
                         if (cards[0].getFace().equalsIgnoreCase(cards[4].getFace())) {
@@ -87,9 +130,7 @@ public class Player {
                         }
                     }
                 }
-            }
-
-            else  if (cards[1].getFace().equalsIgnoreCase(cards[2].getFace())) {
+            } else if (cards[1].getFace().equalsIgnoreCase(cards[2].getFace())) {
                 if (cards[1].getFace().equalsIgnoreCase(cards[4].getFace())) {
                     if (!cards[1].getFace().equalsIgnoreCase(cards[0].getFace())) {
                         if (cards[0].getFace().equalsIgnoreCase(cards[3].getFace())) {
@@ -97,9 +138,7 @@ public class Player {
                         }
                     }
                 }
-            }
-
-            else  if (cards[3].getFace().equalsIgnoreCase(cards[2].getFace())) {
+            } else if (cards[3].getFace().equalsIgnoreCase(cards[2].getFace())) {
                 if (cards[3].getFace().equalsIgnoreCase(cards[4].getFace())) {
                     if (!cards[3].getFace().equalsIgnoreCase(cards[0].getFace())) {
                         if (cards[0].getFace().equalsIgnoreCase(cards[1].getFace())) {
