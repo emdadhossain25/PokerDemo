@@ -46,13 +46,13 @@ public class Game {
             for (int j = 0; j < players[0].getCards().length; j++) {
                 txtView.append("\ncard :"+" "+ players[i].getCardAtIndex(j).toString()+"\n ");
             }
-            if(players[i].royalFlush()==1){
-                txtView.append("\nResult: Royal Flush");
-            }
-            else if(players[i].straightFlush()==1)
-            {
-                txtView.append("\nResult: FLUSH!!\n");
-            }
+//            if(players[i].royalFlush()==1){
+//                txtView.append("\nResult: Royal Flush");
+//            }
+//            else if(players[i].straightFlush()==1)
+//            {
+//                txtView.append("\nResult: FLUSH!!\n");
+//            }
 
 //            else if(players[i].fourOfaKind()==1)
 //            {
@@ -64,7 +64,7 @@ public class Game {
 //                txtView.append("\nResult: Full House!!\n");
 //            }
 
-            else if(players[i].flush()==1)
+             if(players[i].flush()==1)
             {
                 txtView.append("\nResult: Flush!!\n");
             }
@@ -74,21 +74,20 @@ public class Game {
                 txtView.append("\nResult: Straight!!\n");
             }
 
-//            else if(players[i].twoPairs()==1)
-//            {
-//                txtView.append("\nResult: Two pairs!!\n");
-//            }
-//
-//            else if(players[i].triple()==1)
-//            {
-//                txtView.append("\nResult: Triple!!\n");
-//            }
-//
-//            else if(players[i].pair()==1)
-//            {
-//                txtView.append("\nResult: Pair!!\n");
-//            }
+            else if(players[i].threeofakind()==1)
+            {
+                txtView.append("\nResult: Three of a kind!!\n");
+            }
 
+            else if(players[i].twoPairs()==1)
+            {
+                txtView.append("\nResult: Two pairs!!\n");
+            }
+
+            else if(players[i].pair()==1)
+            {
+                txtView.append("\nResult: Pair!!\n");
+            }
 
             else if(players[i].highCard()!=0)
             {
