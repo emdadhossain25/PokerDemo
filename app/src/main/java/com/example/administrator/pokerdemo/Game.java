@@ -50,10 +50,10 @@ public class Game {
             if(players[i].royalFlush()==1){
                 txtView.append("\nResult: Royal Flush");
             }
-//            else if(players[i].straightFlush()==1)
-//            {
-//                txtView.append("\nResult: FLUSH!!\n");
-//            }
+            else if(players[i].straightFlush()==1)
+            {
+                txtView.append("\nResult: FLUSH!!\n");
+            }
 
             else if(players[i].fourOfaKind()==1)
             {
