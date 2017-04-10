@@ -6,7 +6,7 @@
     android:background="#d9e1e7"
     android:baselineAligned="false"
     android:orientation="horizontal"
-    tools:context="com.example.administrator.pokerdemo.MainActivity">
+    tools:context=".MainActivity">
 
     <RelativeLayout
         android:id="@+id/rel_text"
