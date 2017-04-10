@@ -46,15 +46,16 @@ public class Game {
             for (int j = 0; j < players[0].getCards().length; j++) {
                 txtView.append("\ncard :"+" "+ players[i].getCardAtIndex(j).toString()+"\n ");
             }
-//            if(players[i].royalFlush()==1){
-//                txtView.append("\nResult: Royal Flush");
-//            }
+
+            if(players[i].royalFlush()==1){
+                txtView.append("\nResult: Royal Flush");
+            }
 //            else if(players[i].straightFlush()==1)
 //            {
 //                txtView.append("\nResult: FLUSH!!\n");
 //            }
 
-             if(players[i].fourOfaKind()==1)
+            else if(players[i].fourOfaKind()==1)
             {
                 txtView.append("\nResult: Four of a kind!!\n");
             }
