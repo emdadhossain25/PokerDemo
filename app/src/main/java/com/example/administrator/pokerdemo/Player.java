@@ -1,5 +1,7 @@
 package com.example.administrator.pokerdemo;
 
+import android.util.Log;
+
 /**
  * Created by Administrator on 4/1/2017.
  */
@@ -8,6 +10,7 @@ public class Player {
     public final static int MAX_CARD = 5;
     private Card cards[];
     int i;
+    Integer [] cards_int_array;
 
     //constructor initializes 5 cards in each hand
     public Player() {
@@ -299,6 +302,15 @@ public class Player {
             } else if (cards[3].getFace().equalsIgnoreCase(cards[4].getFace())) {
                 return 0;
             }
+            else {
+                cards_int_array = processLine(cards);
+                cards_int_array = doSelection(cards_int_array);
+                for (int i = 0; i< cards_int_array.length; i++){
+                    Log.e("cards_int_array",""+cards_int_array[i]);
+
+                }
+            }
+
         }
 
         return 0;
@@ -449,5 +461,36 @@ public class Player {
         return highCard;
     }
 
+    /**
+     * converting cards.face to int
+     * @param cards
+     * @return
+     */
+    private Integer[] processLine(Card[] cards) {
+        Integer[] card_int_array=new Integer[cards.length];
+        int i=0;
+        for(Card str:cards){
+            card_int_array[i]=Integer.parseInt(str.getFace().trim());//Exception in this line
+            i++;
+        }
+        return card_int_array;
+    }
+
+
+    public static Integer[] doSelection(Integer[] arr){
+        for (int i = 0; i < arr.length - 1; i++)
+        {
+            int index = i;
+            for (int j = i + 1; j < arr.length; j++)
+                if (arr[j] < arr[index])
+                    index = j;
+
+            int smallerNumber = arr[index];
+            arr[index] = arr[i];
+            arr[i] = smallerNumber;
+        }
+        return arr;
+
+    }
 
 }
